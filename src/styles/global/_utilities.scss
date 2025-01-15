@@ -1,0 +1,58 @@
+// src/styles/global/_utilities.scss
+@use '../utils/tokens' as *;
+
+// Layout
+.container {
+  width: 100%;
+  max-width: token('breakpoints', 'desktop');
+  margin: 0 auto;
+  padding: 0 token('spacing', '4');
+}
+
+// Flexbox
+.flex {
+  display: flex;
+  
+  &--center {
+    align-items: center;
+    justify-content: center;
+  }
+  
+  &--between {
+    justify-content: space-between;
+  }
+}
+
+// Spacing
+.mt {
+  &-1 { margin-top: token('spacing', '1'); }
+  &-2 { margin-top: token('spacing', '2'); }
+  &-4 { margin-top: token('spacing', '4'); }
+}
+
+.mb {
+  &-1 { margin-bottom: token('spacing', '1'); }
+  &-2 { margin-bottom: token('spacing', '2'); }
+  &-4 { margin-bottom: token('spacing', '4'); }
+}
+
+// Typography
+.text {
+  &-xs { font-size: token('typography', 'font-size', 'xs'); }
+  &-sm { font-size: token('typography', 'font-size', 'sm'); }
+  &-base { font-size: token('typography', 'font-size', 'base'); }
+  &-lg { font-size: token('typography', 'font-size', 'lg'); }
+}
+
+// Accessibility
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

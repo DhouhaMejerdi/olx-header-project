@@ -1,0 +1,76 @@
+// src/styles/global/_reset.scss
+@use '../utils/tokens' as *;
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: token('typography', 'font-family', 'primary');
+  font-size: token('typography', 'font-size', 'base');
+  line-height: token('typography', 'line-height', 'base');
+  color: token('colors', 'primary', 'base');
+  background-color: token('colors', 'neutral', 'white');
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+// Additional resets for interactive elements
+a {
+    color: inherit;
+    text-decoration: none;
+    
+    &:hover {
+    cursor: pointer;
+    }
+}
+
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+select,
+input {
+    appearance: none;
+    background: transparent;
+    border: 1px solid token('colors', 'primary', 'light');
+    border-radius: token('spacing', '1');
+    padding: token('spacing', '2');
+    
+    &:focus {
+    @include focus-ring;
+    outline-offset: 0;
+    }
+}
+
+// Dropdown arrow customization
+select {
+    padding-right: token('spacing', '4');
+    background-image: url("data:image/svg+xml,..."); // Add custom dropdown arrow
+    background-repeat: no-repeat;
+    background-position: right token('spacing', '2') center;
+}

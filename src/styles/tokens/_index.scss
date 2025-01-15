@@ -1,0 +1,9 @@
+// src/styles/tokens/_index.scss
+
+// Import all token files
+@forward 'colors';
+@forward 'spacing';
+@forward 'typography';
+@forward 'breakpoints';
+@forward 'shadows';
+@forward 'z-index';

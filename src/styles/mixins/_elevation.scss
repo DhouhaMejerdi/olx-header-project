@@ -1,0 +1,5 @@
+// src/styles/mixins/_elevation.scss
+@mixin elevation($level: 'base') {
+    box-shadow: token('shadows', $level);
+}
+  

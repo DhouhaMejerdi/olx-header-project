@@ -1,0 +1,4 @@
+// src/styles/mixins/_z-index.scss
+@mixin z-index($layer) {
+    z-index: token('z-index', $layer);
+}
