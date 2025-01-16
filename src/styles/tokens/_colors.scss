@@ -1,18 +1,22 @@
 // src/styles/tokens/_colors.scss
 $tokens-colors: (
   'primary': (
-    'base': hsla(185, 100%, 10%, 1),    // #002f34
-    'light': hsla(185, 100%, 10%, 0.03), // 3% opacity
-    'medium': hsla(185, 100%, 10%, 0.2), // 20% opacity
-    'dark': hsla(185, 100%, 10%, 0.64)   // 64% opacity
+    'base': hsla(185, 100%, 10%, 1),
+    // #002f34
+    'light': hsla(185, 100%, 10%, 0.03),
+    // 3% opacity
+    'medium': hsla(185, 100%, 10%, 0.2),
+    // 20% opacity
+    'dark': hsla(185, 100%, 10%, 0.64),
+    // 64% opacity
   ),
   'neutral': (
     'black': hsla(0, 0%, 0%, 1),
     'white': hsla(0, 0%, 100%, 1),
-    'gray': hsla(195, 13%, 93%, 1)
+    'gray': hsla(195, 13%, 93%, 1),
   ),
   'accent': (
     'blue': hsla(223, 100%, 61%, 1),
-    'teal': hsla(185, 24%, 32%, 1)
-  )
+    'teal': hsla(185, 24%, 32%, 1),
+  ),
 );

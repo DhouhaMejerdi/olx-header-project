@@ -6,12 +6,14 @@
   @each $property in $properties {
     $transitions: append(
       $transitions,
-      $property token('motion', 'duration', 'base') token('motion', 'easing', 'default'),
+      $property
+        token('motion', 'duration', 'base')
+        token('motion', 'easing', 'default'),
       comma
     );
   }
   transition: $transitions;
-  
+
   @media (prefers-reduced-motion: reduce) {
     transition: none;
   }

@@ -1,0 +1,23 @@
+// src/styles/tokens/_flex.scss
+$tokens-flex: (
+  'alignments': (
+    'center': center,
+    'start': flex-start,
+    'end': flex-end,
+    'stretch': stretch,
+    'baseline': baseline,
+  ),
+  'justification': (
+    'center': center,
+    'start': flex-start,
+    'end': flex-end,
+    'between': space-between,
+    'around': space-around,
+  ),
+  'direction': (
+    'row': row,
+    'column': column,
+    'row-reverse': row-reverse,
+    'column-reverse': column-reverse,
+  ),
+);

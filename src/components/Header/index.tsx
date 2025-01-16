@@ -1,12 +1,14 @@
-import React from "react";
+// components/Header/index.tsx
+import React from 'react';
+import { Logo } from './components/Logo/index';
 
 const Header = () => {
-    return (
-      <div className="header">
-        {/* Add your header content here */}
-        <h1>Header  Component</h1>
-      </div>
-    );
-  };
-  
+  return (
+    <header className="header">
+      <Logo href="/" />
+      {/* Other components will go here */}
+    </header>
+  );
+};
+
 export default Header;

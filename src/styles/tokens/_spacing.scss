@@ -1,11 +1,32 @@
 // src/styles/tokens/_spacing.scss
+
 $tokens-spacing: (
+  //general spacing tokens
   '0': 0,
-  '1': 0.25rem,  // 4px
-  '2': 0.5rem,   // 8px
-  '3': 0.75rem,  // 12px
-  '4': 1rem,     // 16px
-  '5': 1.5rem,   // 24px
-  '6': 2rem,     // 32px
-  '8': 3rem,     // 48px
+  '1': 0.25rem,
+  // 4px
+  '2': 0.5rem,
+  // 8px
+  '3': 0.75rem,
+  // 12px
+  '4': 1rem,
+  // 16px
+  '5': 1.5rem,
+  // 24px
+  '6': 2rem,
+  // 32px
+  '8': 3rem,
+
+  // 48px
+  // the new responsive section
+  'responsive': (
+      'logo': (
+        'mobile': 2rem,
+        // 32px
+        'tablet': 2.5rem,
+        // 40px
+        'desktop': 3rem,
+        // 48px
+      ),
+    )
 );

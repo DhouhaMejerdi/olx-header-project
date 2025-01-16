@@ -1,9 +1,22 @@
 // src/styles/tokens/_index.scss
+@use 'colors';
+@use 'spacing';
+@use 'typography';
+@use 'breakpoints';
+@use 'shadows';
+@use 'z-index';
+@use 'flex';
+@use 'focus';
+@use 'motion';
 
-// Import all token files
-@forward 'colors';
-@forward 'spacing';
-@forward 'typography';
-@forward 'breakpoints';
-@forward 'shadows';
-@forward 'z-index';
+$all-tokens: (
+  "colors": colors.$tokens-colors,
+  "spacing": spacing.$tokens-spacing,
+  "typography": typography.$tokens-typography,
+  "breakpoints": breakpoints.$tokens-breakpoints,
+  "shadows": shadows.$tokens-shadows,
+  "z-index": z-index.$tokens-z-index,
+  "flex": flex.$tokens-flex,
+  "focus": focus.$tokens-focus,
+  "motion": motion.$tokens-motion,
+);

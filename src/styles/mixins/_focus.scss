@@ -1,7 +1,8 @@
 // src/styles/mixins/_focus.scss
 @mixin focus-ring {
-    &:focus-visible {
-      outline: token('focus', 'outline-width') solid token('focus', 'outline-color');
-      outline-offset: token('focus', 'outline-offset');
-    }
+  &:focus-visible {
+    outline: token('focus', 'outline-width') solid
+      token('focus', 'outline-color');
+    outline-offset: token('focus', 'outline-offset');
+  }
 }

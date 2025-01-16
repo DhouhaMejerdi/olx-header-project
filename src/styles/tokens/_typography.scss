@@ -1,23 +1,29 @@
 // src/styles/tokens/_typography.scss
 $tokens-typography: (
   'font-family': (
-    'primary': ('Roboto', sans-serif),
-    'mono': ('Roboto Mono', monospace)
+    'primary': (
+      'Roboto',
+      sans-serif,
+    ),
+    'mono': (
+      'Roboto Mono',
+      monospace,
+    ),
   ),
   'font-size': (
     'xs': clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem),
     'sm': clamp(0.875rem, 0.8rem + 0.375vw, 1rem),
     'base': clamp(1rem, 0.9rem + 0.5vw, 1.125rem),
-    'lg': clamp(1.125rem, 1rem + 0.625vw, 1.25rem)
+    'lg': clamp(1.125rem, 1rem + 0.625vw, 1.25rem),
   ),
   'font-weight': (
     'regular': 400,
     'medium': 500,
-    'bold': 700
+    'bold': 700,
   ),
   'line-height': (
     'tight': 1.2,
     'base': 1.5,
-    'loose': 1.8
-  )
+    'loose': 1.8,
+  ),
 );

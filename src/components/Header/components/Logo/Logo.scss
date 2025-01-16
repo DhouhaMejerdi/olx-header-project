@@ -1,0 +1,36 @@
+// src/components/Header/components/Logo/Logo.scss
+@use '../../../../styles/utils/tokens' as tokens;
+@use '../../../../styles/utils/tokens' as *;
+@use '../../../../styles/mixins/responsive' as *;
+
+.logo {
+  display: block;
+  text-decoration: none;
+
+  &__container {
+    display: flex;
+    align-items: tokens.token('flex', 'alignments', 'center');
+    justify-content: tokens.token('flex', 'justification', 'center');
+
+    background-color: tokens.token('colors', 'primary', 'base');
+    color: tokens.token('colors', 'neutral', 'white');
+
+    // Mobile first approach
+    width: tokens.token('spacing', 'responsive', 'logo', 'mobile');
+    height: tokens.token('spacing', 'responsive', 'logo', 'mobile');
+
+    @include respond-to('tablet') {
+      width: tokens.token('spacing', 'responsive', 'logo', 'tablet');
+      height: tokens.token('spacing', 'responsive', 'logo', 'tablet');
+    }
+
+    @include respond-to('desktop') {
+      width: tokens.token('spacing', 'responsive', 'logo', 'desktop');
+      height: tokens.token('spacing', 'responsive', 'logo', 'desktop');
+    }
+
+    font-weight: tokens.token('typography', 'font-weight', 'bold');
+    font-size: tokens.token('typography', 'font-size', 'base');
+    border-radius: tokens.token('spacing', '1');
+  }
+}

@@ -1,0 +1,22 @@
+// src/styles/utils/_tokens.scss
+@use '../tokens' as tokens;
+
+/// Access design tokens with dynamic nesting support
+/// @param {String} $category - Top-level category (e.g., 'spacing', 'colors')
+/// @param {List} $keys - List of keys to access nested values
+/// @return {*} The token value or null if not found
+
+@function token($category, $keys...) {
+  @if map-has-key(tokens.$all-tokens, $category) {
+    $map: map-get(tokens.$all-tokens, $category);
+    @each $key in $keys {
+      @if map-has-key($map, $key) {
+        $map: map-get($map, $key);
+      } @else {
+        @error "Key '#{$key}' not found in '#{$category}'";
+      }
+    }
+    @return $map;
+  }
+  @error "Category not found: '#{$category}'";
+}
